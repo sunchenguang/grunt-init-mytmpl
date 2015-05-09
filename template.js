@@ -12,10 +12,8 @@
 exports.description = 'Create a basic Gruntfile.';
 
 // Template-specific notes to be displayed before question prompts.
-exports.notes = 'This template tries to guess file and directory paths, but ' +
-    'you will most likely need to edit the generated Gruntfile.js file before ' +
-    'running grunt. _If you run grunt after generating the Gruntfile, and ' +
-    'it exits with errors, edit the file!_';
+exports.notes ='you will most likely need to edit the generated Gruntfile.js file before ' +
+                'running grunt.';
 
 // Any existing file or directory matching this wildcard will cause a warning.
 exports.warnOn = 'Gruntfile.js';
@@ -37,7 +35,7 @@ exports.template = function(grunt, init, done) {
             warning: 'Yes: min + concat tasks. No: nothing to see here.'
         }, {
             name: 'package_json',
-            message: 'Will you have a package.json file?',
+            message: 'Do you want to create a new package.json file?(you can delete the your needless properties)',
             default: 'Y/n',
             warning: 'This changes how filenames are determined and banners are generated.'
         }
