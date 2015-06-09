@@ -48,12 +48,19 @@ module.exports = function(grunt) {
           config:'config.rb'
         }
       }
-
+    },
+    browserSync:{
+      dev:{
+        bsFiles:{
+          src:'*'
+        },
+        options:{
+          watchTask:true,
+          server:'./'
+        }
+      }
     },
     watch: {
-      options:{
-        livereload:true
-      },
       css:{
         files:[''],
         tasks:['compass']
@@ -69,5 +76,6 @@ module.exports = function(grunt) {
     }
   });
  // Default task.
-  grunt.registerTask('default', ['watch' {%= min_concat ? ",'concat', 'uglify'" : "" %}]);
+  grunt.registerTask('default', ['browserSync','watch']);
+  grunt.registerTask('online', [{%= min_concat ? "'concat', 'uglify'" : "" %}]);
 };

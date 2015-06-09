@@ -12,8 +12,7 @@
 exports.description = 'Create a basic Gruntfile.';
 
 // Template-specific notes to be displayed before question prompts.
-exports.notes ='you will most likely need to edit the generated Gruntfile.js file before ' +
-                'running grunt.';
+exports.notes ='you need to edit the generated Gruntfile.js file before running grunt';
 
 // Any existing file or directory matching this wildcard will cause a warning.
 exports.warnOn = 'Gruntfile.js';
@@ -35,7 +34,7 @@ exports.template = function(grunt, init, done) {
             warning: 'Yes: min + concat tasks. No: nothing to see here.'
         }, {
             name: 'package_json',
-            message: 'Do you want to create a new package.json file?(you can delete the your needless properties)',
+            message: 'Do you want to create a basic package.json file?',
             default: 'Y/n',
             warning: 'This changes how filenames are determined and banners are generated.'
         }
@@ -82,11 +81,12 @@ exports.template = function(grunt, init, done) {
                 'grunt': '~0.4.5',
                 'grunt-contrib-jshint': '~0.10.0',
                 'grunt-contrib-watch': '~0.6.1',
-                "autoprefixer-core": "^5.1.11",
-                "grunt-contrib-compass": "^1.0.3",
-                "grunt-postcss": "^0.3.0",
-                "load-grunt-tasks": "^3.1.0",
-                "time-grunt": "^1.1.1"
+                'autoprefixer-core': '^5.1.11',
+                'grunt-contrib-compass': '^1.0.3',
+                'grunt-postcss': '^0.3.0',
+                'grunt-browser-sync':'^2.1.3',
+                'load-grunt-tasks': '^3.1.0',
+                'time-grunt': '^1.1.1'
             };
 
 
