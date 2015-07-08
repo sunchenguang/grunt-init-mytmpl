@@ -12,7 +12,7 @@
 exports.description = 'Create a basic Gruntfile.';
 
 // Template-specific notes to be displayed before question prompts.
-exports.notes ='you need to edit the generated Gruntfile.js file before running grunt';
+exports.notes = 'you need to edit the generated Gruntfile.js file before running grunt';
 
 // Any existing file or directory matching this wildcard will cause a warning.
 exports.warnOn = 'Gruntfile.js';
@@ -84,7 +84,7 @@ exports.template = function(grunt, init, done) {
                 'autoprefixer-core': '^5.1.11',
                 'grunt-contrib-compass': '^1.0.3',
                 'grunt-postcss': '^0.3.0',
-                'grunt-browser-sync':'^2.1.3',
+                'grunt-browser-sync': '^2.1.3',
                 'load-grunt-tasks': '^3.1.0',
                 'time-grunt': '^1.1.1'
             };
@@ -100,10 +100,8 @@ exports.template = function(grunt, init, done) {
                 name: "",
                 version: "1.0.0",
                 description: "",
-                scripts: {
-                },
-                keywords: [
-                ],
+                scripts: {},
+                keywords: [],
                 author: "suncg",
                 license: "MIT",
                 node_version: '>= 0.10.0',

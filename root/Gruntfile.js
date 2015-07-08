@@ -2,6 +2,7 @@
 module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
   require('time-grunt')(grunt);
+  require('grunt-postcss')(grunt);
   // Project configuration.
   grunt.initConfig({{% if (min_concat) { %}
     // Metadata.{% if (package_json) { %}
@@ -49,6 +50,30 @@ module.exports = function(grunt) {
         }
       }
     },
+    sass:{
+      dist:{
+        options:{
+          style:'expanded'
+        },
+        files:{
+          '':'',
+          '':''
+        }
+      }
+    },
+    postcss:{
+      options:{
+        map:true,
+        processors:[
+          require('autoprefixer-core')({
+            browsers:['last 2 versions']
+          })
+        ]
+      },
+      dist:{
+        src:''
+      }
+    },
     browserSync:{
       dev:{
         bsFiles:{
@@ -63,7 +88,7 @@ module.exports = function(grunt) {
     watch: {
       css:{
         files:[''],
-        tasks:['compass']
+        tasks:['sass']
       },
       js:{
         files:[''],
